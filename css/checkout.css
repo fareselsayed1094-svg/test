@@ -1,0 +1,16 @@
+/* =====================================================
+   OUF / عوف — Checkout Page CSS
+   Version 3.0 | 2026
+   ===================================================== */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #dadada;
+}

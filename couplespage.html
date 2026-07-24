@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OUF COUPLES / عوف للأزواج — The Twin Sets</title>
+<meta name="description" content="OUF COUPLES — Discover matching twin sets, bespoke loungewear, and couple monogramming. Quiet luxury for two.">
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-tertiary selection:text-on-tertiary">
+
+<!-- Announcement Bar -->
+<div class="ouf-announcement">
+  <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS — 2026 EDITION</span>
+  <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة — إصدار 2026</span>
+</div>
+
+<!-- Header Navigation -->
+<header class="fixed w-full z-50 flex flex-col items-center px-margin-mobile md:px-margin-desktop bg-surface/80 backdrop-blur-md border-b border-outline-variant/30" style="top:40px;">
+  <div class="flex items-center justify-between w-full max-w-container-max py-4 md:py-6">
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <div class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-widest absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0" style="font-family:'Bodoni Moda',serif;">
+      <a href="homepage.html" style="text-decoration:none;color:#000;">OUF / عوف</a>
+    </div>
+    <nav class="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
+      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="menpage.html">OUF MAN</a>
+      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="womanpage.html">OUF WOMAN</a>
+      <a class="font-label-caps text-label-caps text-primary border-b border-on-tertiary-fixed-variant pb-2" href="couplespage.html">OUF COUPLES</a>
+      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="collectionpage.html">COLLECTIONS</a>
+    </nav>
+    <div class="flex items-center gap-4 text-primary">
+      <button id="search-btn" class="hover:text-secondary transition-colors duration-300" aria-label="Search">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+      <a href="wishlist.html" class="hover:text-secondary transition-colors duration-300 relative" aria-label="The Vault Wishlist">
+        <span class="material-symbols-outlined">favorite_border</span>
+        <span data-wishlist-badge style="display:none;">0</span>
+      </a>
+      <a href="login.html" class="md:block hover:text-secondary transition-colors duration-300" aria-label="Profile">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+      <a href="cartpage.html" class="hover:text-secondary transition-colors duration-300 relative" aria-label="Shopping Bag">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span data-cart-badge style="display:none;">0</span>
+      </a>
+      <button class="font-label-caps text-label-caps text-secondary hover:text-primary ml-2" id="lang-btn">EN / AR</button>
+    </div>
+  </div>
+</header>
+
+<main class="pt-[120px] md:pt-[150px]">
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[550px] md:h-[750px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center w-full h-full" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4MEfVieDdukII67NiQUhPewspOx4MYboD1OsJXhnMvEK1GiwbQSumZuAVjoiV9M3YIcp_GOPEC0hCk27EZ8RSZh3uw8fp-StHGUa2XbToOAGdsCDjQveBJr5zEuKrxAjIkGJrcYB5p4MB7wtSlVt5bqyw-h45s4nR5z14SK-C0tPUj7TaSlT896R0v04TFCU4f4Ql2xzFLW-aLf9J7l5hswd--esr37UturisbDehugZlxdZMnuFM')"></div>
+    <div class="absolute inset-0 bg-black/35"></div>
+    <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop flex flex-col items-center">
+      <h1 class="font-display-lg text-headline-md md:text-display-lg text-white mb-6 drop-shadow-md" style="font-family:'Bodoni Moda',serif;">
+        DESIGNED TO BE TOGETHER<br>
+        <span class="font-arabic-display text-[28px] md:text-[36px] mt-4 block">عالم التوينز المتطابق</span>
+      </h1>
+      <p class="font-label-caps text-label-caps text-white tracking-widest uppercase mt-2 mb-8">The Matching Twin Sets — 2026 Edition</p>
+      <a class="inline-block bg-transparent border border-white text-white font-label-caps text-label-caps px-8 md:px-12 py-4 uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-colors duration-500" href="#collection">
+        Discover the Collection
+      </a>
+    </div>
+  </section>
+
+  <!-- Collection Grid -->
+  <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="collection">
+    <div class="text-center mb-16">
+      <h2 class="font-headline-md text-headline-md text-primary mb-4" style="font-family:'Bodoni Moda',serif;">The Twin Set Collection</h2>
+      <div class="w-12 h-px bg-gold mx-auto" style="background:#9a805b;"></div>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+
+      <!-- Featured Bundle 1 -->
+      <article class="md:col-span-6 product-card group cursor-pointer relative overflow-hidden bg-surface-container-lowest border border-outline-variant/30">
+        <div class="aspect-[4/3] w-full overflow-hidden relative">
+          <img class="w-full h-full object-cover product-img-main" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi3teXCPOlTPLvAs8aAC4Kpzz2223qsE9zLieztOpJx_YTodzlwPYiFT92ywos20JGfMbvp3zmC8lF9_LbrJ1siBe66L4phcIRI4cY4218AExKF0dsWpgG_mZE-GiRETZXiLkPfX4qQ2OalqcTL59spy0NzKp5oW3WClC-suttGgnQcVpezfp8m0LV46S2NyWWhwEtuFEsdNMAB2018IewtLXdSsWvpLIC2uRxVCK5Fkr12VT5_R56" alt="Signature Matching Set">
+          <img class="w-full h-full object-cover product-img-hover absolute inset-0 opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApNnehTUj8lqZLmtHeiqdHQTPc6TF9PVn3ZYLgf_80WVTGaVHL5ZpN6mSVeY53LLcLaIsBET3MvxXdqU1QlAMpDRo9dfhMHFqfxAhdQTFp_EteHl2EoJzuirPs4RiS9if4ijii9t8iGRK6yaQ_4mN05RDY6Gx4BGlX0LR_gLP4YyjwtdIW2O2O0t-UJc7fClnFacPPn9thYlOhYZpknW2unC0caYuFEcdQ_NhTbRkz1ZE-sySqYuJp" alt="Signature Matching Set detail">
+          
+          <div class="product-action-bar">
+            <a href="productspage.html" class="flex-1 bg-black text-white py-3 font-label-caps text-[10px] tracking-widest uppercase text-center text-decoration-none">CUSTOMIZE MONOGRAM</a>
+            <button class="wishlist-btn" data-wishlist-toggle="couples-sig-set" title="Save to Wishlist"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+            <button class="wishlist-btn" data-quickview="couples-sig-set" title="Quick View"><span class="material-symbols-outlined text-[18px]">visibility</span></button>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="font-headline-md text-headline-md text-primary" style="font-family:'Bodoni Moda',serif;">The Signature Matching Set</h3>
+            <p class="font-body-md text-body-md text-secondary mt-2">Lightweight Wool Blend · Bespoke Monogram Stitching</p>
+          </div>
+          <div class="mt-6 flex items-center justify-between">
+            <span class="font-body-lg text-primary font-bold">3,450 EGP</span>
+            <a href="productspage.html" class="font-label-caps text-[11px] tracking-widest text-black underline">Customize Pair &gt;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Featured Bundle 2 -->
+      <article class="md:col-span-6 product-card group cursor-pointer relative overflow-hidden bg-surface-container-lowest border border-outline-variant/30">
+        <div class="aspect-[4/3] w-full overflow-hidden relative">
+          <img class="w-full h-full object-cover product-img-main" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDufbKEuwuNoUP8uxsGg8N33E22F8AADu6YA3nDSEydDGcLElOy4zM00j0pJcZFtb_JS4zBAGFMQJDkc1663t0hvdR9rqiMTdExprc5bln4Fc_n_nlx9Eh5W49xBkCocrF337sdu1mVKxiNWdYQL9ghkJOVrj8mYQEqZCY8NVtPXkhhTM8pwz7KZGNmI5JEUami6BZJzselxEYijmeep4FJwyH6v32yLCz3zZlumlvGOxd-LZ1SOwhA" alt="The Midnight Silk Bundle">
+          <img class="w-full h-full object-cover product-img-hover absolute inset-0 opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4MEfVieDdukII67NiQUhPewspOx4MYboD1OsJXhnMvEK1GiwbQSumZuAVjoiV9M3YIcp_GOPEC0hCk27EZ8RSZh3uw8fp-StHGUa2XbToOAGdsCDjQveBJr5zEuKrxAjIkGJrcYB5p4MB7wtSlVt5bqyw-h45s4nR5z14SK-C0tPUj7TaSlT896R0v04TFCU4f4Ql2xzFLW-aLf9J7l5hswd--esr37UturisbDehugZlxdZMnuFM" alt="The Midnight Silk Bundle detail">
+          
+          <div class="product-action-bar">
+            <button class="flex-1 bg-black text-white py-3 font-label-caps text-[10px] tracking-widest uppercase quick-add-btn" data-id="couples-bundle-001" data-name="The Midnight Silk Bundle" data-price="4500" data-size="HIM:L / HER:M">QUICK ADD BUNDLE</button>
+            <button class="wishlist-btn" data-wishlist-toggle="couples-bundle-001" title="Save to Wishlist"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+            <button class="wishlist-btn" data-quickview="couples-bundle-001" title="Quick View"><span class="material-symbols-outlined text-[18px]">visibility</span></button>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="font-headline-md text-headline-md text-primary" style="font-family:'Bodoni Moda',serif;">The Midnight Silk Bundle</h3>
+            <p class="font-body-md text-body-md text-secondary mt-2">His &amp; Hers Mulberry Silk Lounge Sets</p>
+          </div>
+          <div class="mt-6 flex items-center justify-between">
+            <div>
+              <span class="font-body-lg text-primary font-bold">4,500 EGP</span>
+              <span class="font-body-md text-secondary line-through ml-2">5,000 EGP</span>
+            </div>
+            <button class="font-label-caps text-[11px] tracking-widest text-black underline quick-add-btn" data-id="couples-bundle-001" data-name="The Midnight Silk Bundle" data-price="4500" data-size="HIM:L / HER:M">Order Pair &gt;</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer data-ouf-footer></footer>
+
+<script src="js/ouf-shared.js"></script>
+<script src="js/pages/couplespage.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OUF / عوف — Checkout</title>
+<meta name="description" content="Secure Checkout for OUF.">
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@100..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="css/ouf-shared.css" rel="stylesheet">
+<link href="css/checkout.css" rel="stylesheet">
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+
+<!-- Distraction-free Header -->
+<header class="w-full z-50 flex flex-col items-center px-margin-mobile md:px-margin-desktop bg-surface border-b border-outline-variant/30 py-6 relative">
+  <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-widest uppercase" href="homepage.html" style="font-family:'Bodoni Moda',serif;text-decoration:none;">OUF / عوف</a>
+  <p class="font-label-caps text-label-caps text-secondary mt-2 tracking-[0.2em]">
+    <span class="lang-en">SECURE CHECKOUT</span>
+    <span class="lang-ar" style="display:none;">إتمام الطلب المشفر الآمن</span>
+  </p>
+  <button id="lang-btn" class="absolute right-6 top-6 font-label-caps text-[10px] tracking-widest text-secondary hover:text-primary uppercase border border-outline-variant px-3 py-1">EN / AR</button>
+</header>
+
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col lg:flex-row gap-16 pb-[80px]">
+  
+  <!-- Left Column: Forms -->
+  <div class="w-full lg:w-[55%] xl:w-[60%] flex flex-col gap-12" id="checkout-form">
+    
+    <!-- Contact Info -->
+    <section>
+      <h2 class="font-headline-md text-headline-md text-primary mb-6" style="font-family:'Bodoni Moda',serif;">
+        <span class="lang-en">Contact Information</span>
+        <span class="lang-ar" style="display:none;">معلومات التواصل</span>
+      </h2>
+      <div class="flex flex-col gap-4">
+        <input type="email" name="email" placeholder="Email Address" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors" required>
+        <label class="flex items-center gap-3 cursor-pointer mt-2">
+          <input type="checkbox" class="w-5 h-5 border border-outline-variant checked:bg-primary checked:border-primary focus:ring-0 cursor-pointer" checked>
+          <span class="font-body-md text-secondary text-sm">
+            <span class="lang-en">Send me exclusive updates and bespoke offers</span>
+            <span class="lang-ar" style="display:none;">إرسال التحديثات الحصرية والعروض الخاصة</span>
+          </span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Shipping Info -->
+    <section>
+      <h2 class="font-headline-md text-headline-md text-primary mb-6" style="font-family:'Bodoni Moda',serif;">
+        <span class="lang-en">Shipping Address</span>
+        <span class="lang-ar" style="display:none;">عنوان الشحن والتسليم</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" placeholder="First Name" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors" required>
+        <input type="text" placeholder="Last Name" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors" required>
+        <input type="text" placeholder="Company (Optional)" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors md:col-span-2">
+        <input type="text" placeholder="Address" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors md:col-span-2" required>
+        <input type="text" placeholder="Apartment, suite, etc. (Optional)" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors md:col-span-2">
+        <input type="text" placeholder="City" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors" required>
+        <select class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors appearance-none">
+          <option>Egypt</option>
+          <option>United Arab Emirates</option>
+          <option>Saudi Arabia</option>
+          <option>Qatar</option>
+          <option>United Kingdom</option>
+          <option>United States</option>
+        </select>
+        <input type="text" placeholder="Postal Code" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors">
+        <input type="tel" placeholder="Phone" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors md:col-span-2" required>
+      </div>
+    </section>
+
+    <!-- Payment (Mock) -->
+    <section>
+      <h2 class="font-headline-md text-headline-md text-primary mb-6" style="font-family:'Bodoni Moda',serif;">
+        <span class="lang-en">Payment Method</span>
+        <span class="lang-ar" style="display:none;">طريقة الدفع</span>
+      </h2>
+      <p class="font-body-md text-secondary text-sm mb-4">
+        <span class="lang-en">All transactions are secure and encrypted.</span>
+        <span class="lang-ar" style="display:none;">جميع المعاملات مشفرة وآمنة تماماً.</span>
+      </p>
+      
+      <div class="border border-outline-variant bg-surface-container-lowest shadow-sm">
+        <!-- Credit Card Option -->
+        <label class="flex items-center gap-4 p-4 border-b border-outline-variant cursor-pointer bg-surface-container-low transition-colors">
+          <input type="radio" name="payment" checked class="w-5 h-5 border-outline-variant text-primary focus:ring-0 cursor-pointer">
+          <span class="font-body-md text-primary font-medium">Credit / Debit Card</span>
+          <div class="ml-auto flex gap-2 opacity-60">
+            <span class="material-symbols-outlined text-[20px]">credit_card</span>
+          </div>
+        </label>
+        
+        <!-- Mock Card Fields -->
+        <div class="p-4 bg-surface-container-lowest grid grid-cols-2 gap-4">
+          <input type="text" placeholder="Card Number" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors col-span-2" required>
+          <input type="text" placeholder="Expiration date (MM/YY)" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors" required>
+          <input type="text" placeholder="Security code (CVC)" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors" required>
+          <input type="text" placeholder="Name on card" class="w-full bg-transparent border border-outline-variant p-4 font-body-md text-primary focus:border-primary outline-none transition-colors col-span-2" required>
+        </div>
+
+        <!-- Apple Pay Option -->
+        <label class="flex items-center gap-4 p-4 border-t border-outline-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+          <input type="radio" name="payment" class="w-5 h-5 border-outline-variant text-primary focus:ring-0 cursor-pointer">
+          <span class="font-body-md text-primary font-medium">Apple Pay / Cash on Delivery</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Desktop CTA -->
+    <div class="hidden lg:block mt-8 border-t border-outline-variant/50 pt-8">
+      <button id="place-order-btn-desktop" class="w-full bg-primary text-on-primary font-label-caps text-label-caps tracking-[0.2em] uppercase py-6 hover:bg-neutral-800 transition-colors flex justify-center items-center gap-4">
+        <span>
+          <span class="lang-en">PLACE COMMISSION</span>
+          <span class="lang-ar" style="display:none;">تأكيد وشراء الطلب الآن</span>
+        </span>
+        <span class="material-symbols-outlined text-[18px]">lock</span>
+      </button>
+      <a href="cartpage.html" class="block text-center mt-6 font-label-caps text-[10px] tracking-widest text-secondary hover:text-primary transition-colors underline underline-offset-4">&lt; Return to Bag</a>
+    </div>
+
+  </div>
+
+  <!-- Right Column: Order Summary -->
+  <div class="w-full lg:w-[45%] xl:w-[40%]">
+    <div class="bg-surface-container-low p-6 md:p-8 sticky top-6 border border-outline-variant/30">
+      
+      <h3 class="font-headline-md text-[24px] text-primary mb-6 border-b border-outline-variant/30 pb-4">Commission Summary</h3>
+      
+      <!-- Items -->
+      <div id="checkout-items" class="space-y-6 mb-8 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Privilege Code (Coupon) -->
+      <div class="border-t border-outline-variant/30 pt-6 mb-6">
+        <label class="block font-label-caps text-[10px] tracking-widest text-primary uppercase mb-3">Privilege Code / رمز الخصم</label>
+        <div class="flex border border-outline-variant bg-transparent">
+          <input id="checkout-coupon-input" type="text" placeholder="e.g. OUF20" autocomplete="off" class="flex-1 bg-transparent border-none outline-none p-3 font-body-md text-xs text-primary placeholder-on-surface-variant/50 focus:ring-0">
+          <button id="checkout-coupon-btn" type="button" class="bg-primary text-on-primary font-label-caps text-[10px] tracking-widest px-6 hover:bg-neutral-800 transition-colors">APPLY</button>
+        </div>
+        <p id="checkout-coupon-msg" class="font-body-md text-xs mt-2 hidden"></p>
+      </div>
+
+      <div class="border-t border-outline-variant/30 pt-6 space-y-4 mb-6">
+        <div class="flex justify-between font-body-md text-secondary">
+          <span>Subtotal</span>
+          <span id="co-subtotal">0 EGP</span>
+        </div>
+        
+        <div class="flex justify-between font-body-md text-tertiary-container hidden" id="co-discount-line">
+          <span>Discount (<span id="co-coupon-label"></span>)</span>
+          <span id="co-discount-val">-0 EGP</span>
+        </div>
+
+        <div class="flex justify-between font-body-md text-secondary hidden" id="co-gift-line">
+          <span>Heritage Packaging</span>
+          <span id="co-gift-val">200 EGP</span>
+        </div>
+        
+        <div class="flex justify-between font-body-md text-secondary">
+          <span>Shipping</span>
+          <span>Complimentary</span>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-end border-t border-outline-variant/30 pt-6">
+        <span class="font-headline-md text-[24px] text-primary">Total</span>
+        <div class="text-right">
+          <span class="font-label-caps text-label-caps text-secondary mr-2">EGP</span>
+          <span class="font-headline-md text-[28px] text-primary" id="co-total">0</span>
+        </div>
+      </div>
+
+      <!-- Mobile CTA -->
+      <div class="block lg:hidden mt-12">
+        <button id="place-order-btn-mobile" class="w-full bg-primary text-on-primary font-label-caps text-label-caps tracking-[0.2em] uppercase py-6 hover:bg-surface-variant hover:text-primary transition-colors flex justify-center items-center gap-4">
+          PLACE COMMISSION <span class="material-symbols-outlined text-[18px]">lock</span>
+        </button>
+        <a href="cartpage.html" class="block text-center mt-6 font-label-caps text-[10px] tracking-widest text-secondary hover:text-primary transition-colors underline underline-offset-4">&lt; Return to Bag</a>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer data-ouf-footer></footer>
+
+<script src="js/ouf-shared.js"></script>
+<script src="js/pages/checkout.js"></script>
+</body>
+</html>

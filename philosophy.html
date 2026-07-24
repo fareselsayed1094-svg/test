@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUF / عوف — Philosophy</title>
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:wght@300;400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+
+<div class="ouf-announcement">
+  <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS</span>
+  <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة</span>
+</div>
+
+<header class="fixed w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30" style="top:40px;">
+  <div class="flex items-center justify-between w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+    <a href="homepage.html" class="font-display-lg text-headline-md md:text-display-lg text-primary tracking-widest absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">OUF / عوف</a>
+    <div class="flex items-center gap-4 ml-auto">
+      <button id="search-btn" class="text-primary"><span class="material-symbols-outlined">search</span></button>
+      <a href="cartpage.html" class="text-primary relative"><span class="material-symbols-outlined">shopping_bag</span><span data-cart-badge style="display:none;">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow ouf-info-page px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+  <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">
+    <span class="lang-en">Our Philosophy</span>
+    <span class="lang-ar" style="display:none;">فلسفتنا</span>
+  </h1>
+  <div class="ouf-info-content">
+    <p class="font-body-lg text-secondary mb-8">
+      <span class="lang-en">At OUF / عوف, we believe luxury is not loud — it is precise, personal, and enduring.</span>
+      <span class="lang-ar" style="display:none;">في عوف، نؤمن أن الفخامة ليست صاخبة — بل دقيقة، شخصية، ودائمة.</span>
+    </p>
+    <h2><span class="lang-en">Quiet Authority</span><span class="lang-ar" style="display:none;">سلطة هادئة</span></h2>
+    <p><span class="lang-en">Every garment is crafted with intentional restraint. We design for those who lead without announcement — bespoke pieces that speak through cut, texture, and longevity.</span><span class="lang-ar" style="display:none;">كل قطعة تُصنع بقصد واضح. نصمم لمن يقودون بصمت — قطع مخصصة تتحدث عبر القصة والملمس والبقاء.</span></p>
+    <h2><span class="lang-en">The Twin Craft</span><span class="lang-ar" style="display:none;">حرفة التوأم</span></h2>
+    <p><span class="lang-en">Our couples collections unite two identities in harmonious design — matching sets that celebrate partnership without uniformity.</span><span class="lang-ar" style="display:none;">مجموعات الأزواج لدينا توحد هويتين في تصميم متناغم — أطقم متطابقة تحتفي بالشراكة دون تشابه مطلق.</span></p>
+    <h2><span class="lang-en">Bespoke by Nature</span><span class="lang-ar" style="display:none;">مخصص بطبيعته</span></h2>
+    <p><span class="lang-en">From monogramming to measurement profiles, OUF adapts to you. Our ateliers in Cairo and Dubai serve a global clientele with white-glove precision.</span><span class="lang-ar" style="display:none;">من التطريز إلى ملفات القياس، عوف يتكيف معك. ورشنا في القاهرة ودبي تخدم عملاء عالميين بدقة فائقة.</span></p>
+    <a href="collectionpage.html" class="inline-block mt-8 bg-primary text-on-primary font-label-caps text-label-caps px-10 py-4 tracking-widest hover:bg-surface-variant hover:text-primary transition-colors">
+      <span class="lang-en">Explore Collections</span><span class="lang-ar" style="display:none;">استكشف المجموعات</span>
+    </a>
+  </div>
+</main>
+
+<footer data-ouf-footer></footer>
+<script src="js/ouf-shared.js"></script>
+</body>
+</html>

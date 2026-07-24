@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUF / عوف — Contact Concierge</title>
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:wght@300;400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+
+<div class="ouf-announcement">
+  <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS</span>
+  <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة</span>
+</div>
+
+<header class="fixed w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30" style="top:40px;">
+  <div class="flex items-center justify-between w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+    <a href="homepage.html" class="font-display-lg text-headline-md md:text-display-lg text-primary tracking-widest absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">OUF / عوف</a>
+    <div class="flex items-center gap-4 ml-auto">
+      <button id="search-btn" class="text-primary"><span class="material-symbols-outlined">search</span></button>
+      <a href="cartpage.html" class="text-primary relative"><span class="material-symbols-outlined">shopping_bag</span><span data-cart-badge style="display:none;">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow ouf-info-page px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+  <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">
+    <span class="lang-en">Contact Concierge</span>
+    <span class="lang-ar" style="display:none;">تواصل مع الكونسierge</span>
+  </h1>
+  <p class="font-body-md text-secondary mb-12 max-w-lg">
+    <span class="lang-en">Our concierge team is available Sunday–Thursday, 10:00–20:00 GST.</span>
+    <span class="lang-ar" style="display:none;">فريق الكونسierge متاح الأحد–الخميس، 10:00–20:00.</span>
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
+    <form id="contact-form" class="space-y-4">
+      <input type="text" name="name" required placeholder="Full Name" class="w-full bg-transparent border border-outline-variant p-4 font-body-md focus:border-primary outline-none">
+      <input type="email" name="email" required placeholder="Email Address" class="w-full bg-transparent border border-outline-variant p-4 font-body-md focus:border-primary outline-none">
+      <select name="topic" class="w-full bg-transparent border border-outline-variant p-4 font-body-md focus:border-primary outline-none">
+        <option>Order Inquiry</option>
+        <option>Bespoke Commission</option>
+        <option>Private Circle</option>
+        <option>Other</option>
+      </select>
+      <textarea name="message" required rows="5" placeholder="Your message..." class="w-full bg-transparent border border-outline-variant p-4 font-body-md focus:border-primary outline-none resize-none"></textarea>
+      <button type="submit" class="w-full bg-primary text-on-primary font-label-caps text-label-caps py-4 tracking-widest hover:bg-surface-variant hover:text-primary transition-colors">
+        <span class="lang-en">Send Message</span><span class="lang-ar" style="display:none;">إرسال</span>
+      </button>
+    </form>
+    <div class="space-y-8">
+      <div>
+        <h3 class="font-label-caps text-label-caps text-primary mb-2">Email</h3>
+        <a href="mailto:concierge@ouf.com" class="font-body-md text-secondary hover:text-primary transition-colors">concierge@ouf.com</a>
+      </div>
+      <div>
+        <h3 class="font-label-caps text-label-caps text-primary mb-2">WhatsApp</h3>
+        <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="font-body-md text-secondary hover:text-primary transition-colors">+20 100 000 0000</a>
+      </div>
+      <div>
+        <h3 class="font-label-caps text-label-caps text-primary mb-2">Ateliers</h3>
+        <p class="font-body-md text-secondary">Cairo, Egypt · Dubai, UAE</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer data-ouf-footer></footer>
+<script src="js/ouf-shared.js"></script>
+<script src="js/pages/contact.js"></script>
+</body>
+</html>

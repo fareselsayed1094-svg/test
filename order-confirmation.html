@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUF / عوف — Order Confirmed</title>
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:wght@300;400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+
+<header class="w-full py-8 border-b border-outline-variant/30 text-center">
+  <a href="homepage.html" class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-widest">OUF / عوف</a>
+</header>
+
+<main class="flex-grow flex items-center justify-center px-margin-mobile md:px-margin-desktop py-16">
+  <div id="order-content" class="max-w-lg w-full text-center">
+    <div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-8">
+      <span class="material-symbols-outlined text-[32px]">check</span>
+    </div>
+    <h1 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-4">
+      <span class="lang-en">Commission Confirmed</span>
+      <span class="lang-ar" style="display:none;">تم تأكيد الطلب</span>
+    </h1>
+    <p class="font-body-md text-secondary mb-2">Order <strong id="order-id" class="text-primary"></strong></p>
+    <p class="font-body-md text-secondary mb-8"><span class="lang-en">Placed on </span><span id="order-date"></span></p>
+    <p class="font-headline-md text-primary mb-8" id="order-total"></p>
+    <ul id="order-items" class="text-left mb-10 space-y-1"></ul>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="profile.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 tracking-widest hover:bg-surface-variant hover:text-primary transition-colors">
+        <span class="lang-en">Track in Private Circle</span>
+        <span class="lang-ar" style="display:none;">تتبع في الدائرة الخاصة</span>
+      </a>
+      <a href="homepage.html" class="border border-primary text-primary font-label-caps text-label-caps px-8 py-4 tracking-widest hover:bg-primary hover:text-on-primary transition-colors">
+        <span class="lang-en">Continue Shopping</span>
+        <span class="lang-ar" style="display:none;">متابعة التسوق</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="order-empty" class="hidden max-w-md text-center">
+    <p class="font-body-lg text-secondary mb-6">No order found.</p>
+    <a href="homepage.html" class="font-label-caps text-label-caps text-primary underline">Return Home</a>
+  </div>
+</main>
+
+<footer data-ouf-footer></footer>
+<script src="js/ouf-shared.js"></script>
+<script src="js/pages/order-confirmation.js"></script>
+</body>
+</html>

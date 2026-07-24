@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUF / عوف — Luxury Bespoke House</title>
+<script src="js/ouf-shared.js"></script>
+<script>
+  // Auth Gatekeeper: Redirect to login.html if not logged in, otherwise to homepage.html
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!OUF.auth.isLoggedIn()) {
+      window.location.replace('login.html');
+    } else {
+      window.location.replace('homepage.html');
+    }
+  });
+</script>
+</head>
+<body style="background:#faf8f5;margin:0;display:flex;align-items:center;justify-content:center;height:100vh;font-family:'Inter',sans-serif;">
+  <div style="text-align:center;">
+    <h1 style="font-family:'Bodoni Moda',serif;font-size:32px;letter-spacing:0.15em;margin-bottom:12px;">OUF / عوف</h1>
+    <p style="font-size:11px;letter-spacing:0.2em;color:#747878;text-transform:uppercase;">LOADING PRIVATE CIRCLE...</p>
+  </div>
+</body>
+</html>

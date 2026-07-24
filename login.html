@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OUF / عوف — Private Circle</title>
+<meta name="description" content="Access the exclusive OUF Private Circle lounge.">
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@100..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="css/ouf-shared.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+
+<!-- APP SHELL: TopAppBar (Hidden initially for SSO) -->
+<header class="hidden fixed top-0 w-full z-50 flex flex-col items-center px-margin-mobile md:px-margin-desktop bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500" id="top-nav" style="top:40px;">
+  
+  <!-- Announcement Bar (Hidden on login, shown on dashboard) -->
+  <div class="ouf-announcement fixed top-0 left-0 w-full z-50" style="margin-top:-40px;">
+    <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS</span>
+    <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة</span>
+  </div>
+
+  <div class="flex items-center justify-between w-full h-20 max-w-container-max mx-auto">
+    <!-- Mobile Menu Toggle -->
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu">
+      <span class="material-symbols-outlined text-[24px]">menu</span>
+    </button>
+    <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-widest uppercase absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0" href="homepage.html">OUF / عوف</a>
+    <nav class="hidden md:flex items-center gap-8 ml-12 font-label-caps text-label-caps">
+      <a class="text-secondary hover:text-primary transition-colors" href="menpage.html">OUF MAN</a>
+      <a class="text-secondary hover:text-primary transition-colors" href="womanpage.html">OUF WOMAN</a>
+      <a class="text-secondary hover:text-primary transition-colors" href="couplespage.html">OUF COUPLES</a>
+    </nav>
+    <div class="flex-grow hidden md:block"></div>
+    <div class="flex items-center gap-4 md:gap-6">
+      <button id="search-btn" class="text-primary hover:text-secondary transition-colors">
+        <span class="material-symbols-outlined text-[24px]">search</span>
+      </button>
+      <a href="login.html" class="md:flex text-primary border-b border-on-tertiary-fixed-variant pb-2">
+        <span class="material-symbols-outlined text-[24px]">person</span>
+      </a>
+      <a href="cartpage.html" class="text-primary hover:text-secondary transition-colors relative cursor-pointer group">
+        <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+        <span data-cart-badge style="display:none;">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- STATE 1: Single-Sign-On Gate -->
+<main class="flex-grow flex items-center justify-center p-margin-mobile md:p-margin-desktop bg-background transition-opacity duration-700 pt-[100px] pb-[80px]" id="sso-view">
+  <div class="w-full max-w-md bg-surface p-8 md:p-12 flex flex-col items-center text-center border-outline-variant/50 border shadow-sm">
+    <h1 class="font-display-lg text-[40px] text-primary mb-2 uppercase tracking-widest" style="font-family:'Bodoni Moda',serif;">OUF / عوف</h1>
+    <p class="font-label-caps text-label-caps text-secondary mb-8 tracking-[0.2em]">
+      <span class="lang-en">THE PRIVATE CIRCLE</span>
+      <span class="lang-ar" style="display:none;">الدائرة الخاصة</span>
+    </p>
+    <p class="font-body-md text-body-md text-secondary mb-8">
+      <span class="lang-en">Identify yourself to access the lounge and your bespoke profile.</span>
+      <span class="lang-ar" style="display:none;">قم بتسجيل الدخول للوصول إلى الخزنة والملف الشخصي المخصص.</span>
+    </p>
+    <div class="w-full flex flex-col gap-4">
+      <button id="btn-google" class="w-full h-12 bg-primary text-on-primary font-label-caps text-label-caps tracking-widest flex items-center justify-center gap-3 hover:bg-neutral-800 transition-colors uppercase">
+        <span class="material-symbols-outlined text-[18px]">account_circle</span>
+        <span class="lang-en">CONTINUE WITH GOOGLE</span>
+        <span class="lang-ar" style="display:none;">المتابعة باستخدام جوجل</span>
+      </button>
+      <button id="btn-apple" class="w-full h-12 bg-transparent border border-primary text-primary font-label-caps text-label-caps tracking-widest flex items-center justify-center gap-3 hover:bg-surface-container transition-all uppercase">
+        <span class="material-symbols-outlined text-[18px]">apps</span>
+        <span class="lang-en">CONTINUE WITH APPLE</span>
+        <span class="lang-ar" style="display:none;">المتابعة باستخدام أبل</span>
+      </button>
+    </div>
+    <div class="mt-8 text-center w-full">
+      <div class="h-[1px] w-full bg-outline-variant/30 mb-6"></div>
+      <button id="btn-invite" class="btn-ghost text-on-tertiary-container font-label-caps text-[10px] tracking-widest uppercase">
+        <span class="lang-en">REQUEST AN INVITATION</span>
+        <span class="lang-ar" style="display:none;">طلب دعوة خاصة</span>
+      </button>
+    </div>
+    <div class="mt-6">
+      <button id="lang-btn" class="font-label-caps text-[10px] tracking-widest text-secondary hover:text-primary uppercase border border-outline-variant px-4 py-2">EN / AR</button>
+    </div>
+  </div>
+</main>
+
+<!-- APP SHELL: Footer (Hidden initially for SSO) -->
+<footer data-ouf-footer class="hidden mt-24 border-t border-outline-variant/30" id="bottom-footer"></footer>
+
+<script src="js/ouf-shared.js"></script>
+<script src="js/pages/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUF / عوف — Terms</title>
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:wght@300;400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+
+<div class="ouf-announcement">
+  <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS</span>
+  <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة</span>
+</div>
+
+<header class="fixed w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30" style="top:40px;">
+  <div class="flex items-center justify-between w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+    <a href="homepage.html" class="font-display-lg text-headline-md md:text-display-lg text-primary tracking-widest absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">OUF / عوف</a>
+    <div class="flex items-center gap-4 ml-auto">
+      <button id="search-btn" class="text-primary"><span class="material-symbols-outlined">search</span></button>
+      <a href="cartpage.html" class="text-primary relative"><span class="material-symbols-outlined">shopping_bag</span><span data-cart-badge style="display:none;">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow ouf-info-page px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+  <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">
+    <span class="lang-en">Terms & Conditions</span>
+    <span class="lang-ar" style="display:none;">الشروط والأحكام</span>
+  </h1>
+  <div class="ouf-info-content">
+    <p class="text-sm text-secondary mb-6"><span class="lang-en">Last updated: January 2026</span><span class="lang-ar" style="display:none;">آخر تحديث: يناير 2026</span></p>
+    <h2><span class="lang-en">Orders & Payment</span><span class="lang-ar" style="display:none;">الطلبات والدفع</span></h2>
+    <p><span class="lang-en">All prices are listed in Egyptian Pounds (EGP). Payment is processed securely at checkout. Bespoke commissions are confirmed upon payment.</span><span class="lang-ar" style="display:none;">جميع الأسعار بالجنيه المصري. الدفع آمن عند إتمام الطلب. الطلبات المخصصة تُؤكد بعد الدفع.</span></p>
+    <h2><span class="lang-en">Returns & Exchanges</span><span class="lang-ar" style="display:none;">الإرجاع والاستبدال</span></h2>
+    <p><span class="lang-en">Ready-to-wear items may be exchanged within 30 days if unworn with tags. Bespoke and monogrammed items are final sale.</span><span class="lang-ar" style="display:none;">القطع الجاهزة قابلة للاستبدال خلال 30 يوماً إن لم تُلبس. القطع المخصصة والمطرزة نهائية.</span></p>
+    <h2><span class="lang-en">Discount Codes</span><span class="lang-ar" style="display:none;">أكواد الخصم</span></h2>
+    <p><span class="lang-en">One coupon per order. Codes cannot be combined. Valid codes include OUF10, OUF20, ELITE25, and RAMADAN.</span><span class="lang-ar" style="display:none;">كوبون واحد لكل طلب. لا يمكن الجمع بين الأكواد. أكواد صالحة: OUF10، OUF20، ELITE25، RAMADAN.</span></p>
+    <h2><span class="lang-en">Privacy</span><span class="lang-ar" style="display:none;">الخصوصية</span></h2>
+    <p><span class="lang-en">Your measurement profiles and order history in the Private Circle are encrypted and never shared with third parties.</span><span class="lang-ar" style="display:none;">ملفات القياس وسجل الطلبات في الدائرة الخاصة مشفرة ولا تُشارك مع أطراف ثالثة.</span></p>
+  </div>
+</main>
+
+<footer data-ouf-footer></footer>
+<script src="js/ouf-shared.js"></script>
+</body>
+</html>

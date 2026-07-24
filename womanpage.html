@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OUF WOMAN / عوف — Editorial Selection</title>
+<meta name="description" content="OUF WOMAN — Bespoke womenswear. Suits, skirts, silk blouses and artisanal tunics.">
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased">
+
+<!-- Announcement Bar -->
+<div class="ouf-announcement">
+  <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS — 2026 EDITION</span>
+  <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة — إصدار 2026</span>
+</div>
+
+<!-- Header Navigation -->
+<header class="fixed w-full z-50 flex flex-col items-center px-margin-mobile md:px-margin-desktop bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300" style="top:40px;">
+  <div class="w-full max-w-container-max flex justify-between items-center py-5">
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <div class="flex-1 hidden md:block"></div>
+    <div class="flex-1 text-center">
+      <a href="homepage.html" class="font-display-lg text-headline-md md:text-display-lg text-primary tracking-widest uppercase" style="font-family:'Bodoni Moda',serif;text-decoration:none;">OUF / عوف</a>
+    </div>
+    <div class="flex-1 flex justify-end gap-4 md:gap-6 text-primary items-center">
+      <button id="search-btn" aria-label="Search" class="hover:text-secondary transition-colors duration-300">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+      <a href="wishlist.html" class="hover:text-secondary transition-colors duration-300 relative" aria-label="The Vault Wishlist">
+        <span class="material-symbols-outlined">favorite_border</span>
+        <span data-wishlist-badge style="display:none;">0</span>
+      </a>
+      <a href="login.html" aria-label="Profile" class="hover:text-secondary transition-colors duration-300 md:inline-flex">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+      <a href="cartpage.html" aria-label="Shopping Bag" class="hover:text-secondary transition-colors duration-300 relative">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span data-cart-badge style="display:none;">0</span>
+      </a>
+      <button class="font-label-caps text-label-caps text-secondary hover:text-primary ml-2" id="lang-btn">EN / AR</button>
+    </div>
+  </div>
+  <nav class="flex gap-8 md:gap-12 pb-4 w-full justify-center overflow-x-auto no-scrollbar">
+    <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="menpage.html">OUF MAN</a>
+    <a class="font-label-caps text-label-caps text-primary border-b border-on-tertiary-fixed-variant pb-2" href="womanpage.html">OUF WOMAN</a>
+    <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="couplespage.html">OUF COUPLES</a>
+    <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="collectionpage.html">COLLECTIONS</a>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow pt-[180px] md:pt-[200px] pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+  <h1 class="sr-only">OUF Woman — Womenswear Collection</h1>
+
+  <!-- Editorial Category Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[280px] md:auto-rows-[400px]">
+
+    <!-- Box A: Womenswear Suits & Tailoring (Large) -->
+    <a class="md:col-span-8 md:row-span-2 relative group overflow-hidden bg-surface-container-highest cursor-pointer flex" href="collectionpage.html?cat=women" aria-label="Womenswear Suits & Tailoring">
+      <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWLXF6yGBkBbkweDddDm-hKHsRu5T-kvO_VqJfmbtXx4fyK9a-pl2r5ebfltye7saw25yPuyAGSQ7MdkdKp-11X4Yt8TOzKnFue0kWRF4lAvrIgLviA6J48mRxqjjRXiBc0LLVGLWTuQAGGj5M8kZHMcBe5AQAPu68WWVxYs4xPjX_czsZmG2Iv-Y0rj--UGyYBItlYoplZxJBLdaMx_ucd9oX-jC8_3icqL5ZPeZr0BmNtNu5QYE_"
+        alt="Womenswear Suits & Tailoring">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center z-10 p-4 text-center">
+        <span class="font-label-caps text-label-caps text-white tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity duration-300">Womenswear Suits &amp; Tailoring</span>
+        <span class="font-arabic-body text-arabic-body text-white opacity-90 mt-2">البدل النسائية</span>
+        <span class="mt-4 border border-white text-white font-label-caps text-label-caps px-6 py-2 group-hover:bg-white group-hover:text-black transition-all duration-300">SHOP NOW</span>
+      </div>
+    </a>
+
+    <!-- Box B: Architectural Skirts (Vertical) -->
+    <a class="md:col-span-4 md:row-span-2 relative group overflow-hidden bg-surface-container-highest cursor-pointer flex" href="collectionpage.html?cat=women" aria-label="Architectural Skirts">
+      <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNy6X1K9BUAHKaP7kiT5KDDGDi6yi-yoUiCnHn02hvYhmtzUyT0uoZNJuNIn64RW9jpAhHzK1BGoqrlIvbCSlo0RR9qYLKmAX78sGpU0wMCXRoHnRIzk-CWFq1AjCnhboT7dtEUOI8sewKy-yd6eDL7rUrtu-ZL0bCHZJUVF-ZR4Wdkm2MPBre73rmchOpfYu0NLt73CKsZ0bEqY_UVsPU3atgrVVnYPOzmgndTUDQmhYw0-2ng3Xe"
+        alt="Architectural Skirts">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 z-10 p-4 text-center">
+        <span class="font-label-caps text-label-caps text-white tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity duration-300">Architectural Skirts</span>
+        <span class="font-arabic-body text-arabic-body text-white opacity-90">الجيب النسائية الفاخرة</span>
+        <span class="mt-4 border border-white text-white font-label-caps text-label-caps px-6 py-2 group-hover:bg-white group-hover:text-black transition-all duration-300">EXPLORE</span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer data-ouf-footer></footer>
+
+<script src="js/ouf-shared.js"></script>
+<script src="js/pages/womanpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUF / عوف — Shipping</title>
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:wght@300;400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+
+<div class="ouf-announcement">
+  <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS</span>
+  <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة</span>
+</div>
+
+<header class="fixed w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30" style="top:40px;">
+  <div class="flex items-center justify-between w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+    <a href="homepage.html" class="font-display-lg text-headline-md md:text-display-lg text-primary tracking-widest absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">OUF / عوف</a>
+    <div class="flex items-center gap-4 ml-auto">
+      <button id="search-btn" class="text-primary"><span class="material-symbols-outlined">search</span></button>
+      <a href="cartpage.html" class="text-primary relative"><span class="material-symbols-outlined">shopping_bag</span><span data-cart-badge style="display:none;">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow ouf-info-page px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+  <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">
+    <span class="lang-en">Shipping & Delivery</span>
+    <span class="lang-ar" style="display:none;">الشحن والتوصيل</span>
+  </h1>
+  <div class="ouf-info-content">
+    <h2><span class="lang-en">Complimentary Global Shipping</span><span class="lang-ar" style="display:none;">شحن عالمي مجاني</span></h2>
+    <p><span class="lang-en">All bespoke and ready-to-wear orders ship complimentary worldwide. Standard delivery: 5–7 business days. Express: 2–3 business days (select regions).</span><span class="lang-ar" style="display:none;">جميع الطلبات المخصصة والجاهزة تُشحن مجاناً عالمياً. التوصيل العادي: 5–7 أيام عمل. السريع: 2–3 أيام (مناطق مختارة).</span></p>
+    <h2><span class="lang-en">Bespoke Commissions</span><span class="lang-ar" style="display:none;">الطلبات المخصصة</span></h2>
+    <p><span class="lang-en">Custom tailoring requires 14–21 business days for production. You will receive real-time updates via your Private Circle dashboard.</span><span class="lang-ar" style="display:none;">الخياطة المخصصة تستغرق 14–21 يوم عمل. ستتلقى تحديثات عبر لوحة الدائرة الخاصة.</span></p>
+    <h2><span class="lang-en">Regions We Serve</span><span class="lang-ar" style="display:none;">المناطق التي نخدمها</span></h2>
+    <p><span class="lang-en">Egypt, UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, UK, EU, and United States.</span><span class="lang-ar" style="display:none;">مصر، الإمارات، السعودية، قطر، الكويت، البحرين، عمان، بريطانيا، أوروبا، والولايات المتحدة.</span></p>
+    <h2><span class="lang-en">Heritage Packaging</span><span class="lang-ar" style="display:none;">التغليف التراثي</span></h2>
+    <p><span class="lang-en">Optional silk tissue and velvet-lined presentation box available at checkout (+200 EGP).</span><span class="lang-ar" style="display:none;">تغليف حريري وصندوق مخملي اختياري عند الدفع (+200 جنيه).</span></p>
+  </div>
+</main>
+
+<footer data-ouf-footer></footer>
+<script src="js/ouf-shared.js"></script>
+</body>
+</html>

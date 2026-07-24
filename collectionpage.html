@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OUF — The Collection</title>
+<meta name="description" content="Explore the exclusive OUF collections. Tailored suits, silk loungewear, and couple sets.">
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased">
+
+<!-- Announcement Bar -->
+<div class="ouf-announcement">
+  <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS — 2026 EDITION</span>
+  <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة — إصدار 2026</span>
+</div>
+
+<!-- Header Navigation -->
+<header class="fixed w-full z-50 flex flex-col items-center px-margin-mobile md:px-margin-desktop bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300" style="top:40px;">
+  <div class="w-full max-w-container-max flex justify-between items-center py-5">
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <div class="flex-1 hidden md:block">
+      <nav class="flex space-x-8 font-label-caps text-label-caps">
+        <a class="text-secondary hover:text-primary transition-colors duration-300" href="menpage.html">OUF MAN</a>
+        <a class="text-secondary hover:text-primary transition-colors duration-300" href="womanpage.html">OUF WOMAN</a>
+        <a class="text-secondary hover:text-primary transition-colors duration-300" href="couplespage.html">OUF COUPLES</a>
+        <a class="text-primary border-b border-black pb-1" href="collectionpage.html">COLLECTIONS</a>
+      </nav>
+    </div>
+    <div class="flex-1 md:flex-none text-center">
+      <a class="font-display-lg text-display-lg text-primary tracking-widest uppercase inline-block" href="homepage.html" style="font-family:'Bodoni Moda',serif;text-decoration:none;">OUF / عوف</a>
+    </div>
+    <div class="flex-1 flex justify-end items-center gap-4 md:gap-6 text-primary">
+      <button id="search-btn" aria-label="Search" class="hover:text-secondary transition-colors duration-300">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+      <a href="wishlist.html" aria-label="The Vault Wishlist" class="hover:text-secondary transition-colors duration-300 relative">
+        <span class="material-symbols-outlined">favorite_border</span>
+        <span data-wishlist-badge style="display:none;">0</span>
+      </a>
+      <a href="login.html" aria-label="Profile" class="hidden md:block hover:text-secondary transition-colors duration-300">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+      <a href="cartpage.html" aria-label="Shopping Bag" class="hover:text-secondary transition-colors duration-300 relative">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span data-cart-badge style="display:none;">0</span>
+      </a>
+      <button id="lang-btn" class="font-label-caps text-label-caps text-secondary hover:text-primary ml-2">EN / AR</button>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-[160px] md:pt-[180px] pb-section-gap flex flex-col">
+  
+  <!-- Breadcrumb -->
+  <nav class="mb-8 font-label-caps text-label-caps text-secondary flex items-center space-x-2">
+    <a class="hover:text-primary transition-colors" href="homepage.html">Home</a>
+    <span class="text-outline-variant">&gt;</span>
+    <span class="text-primary" id="collection-title">All Collections</span>
+  </nav>
+
+  <!-- Mobile Filter Toggle -->
+  <div class="md:hidden mb-6 flex justify-between items-center border-b border-outline-variant/30 pb-4">
+    <button id="mobile-filter-btn" class="font-label-caps text-label-caps text-primary flex items-center gap-2">
+      <span class="material-symbols-outlined text-[18px]">tune</span> FILTERS &amp; SORT
+    </button>
+    <span class="font-body-md text-body-md text-secondary" id="mobile-item-count">7 Items</span>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-8">
+    
+    <!-- Sidebar Filters -->
+    <aside id="collection-filters" class="w-full md:w-[260px] flex-shrink-0 flex flex-col space-y-8 pr-6 border-r border-outline-variant/30 sticky top-[140px] h-fit max-h-[calc(100vh-160px)] overflow-y-auto custom-scrollbar">
+      
+      <!-- Category Filter -->
+      <div>
+        <h3 class="font-label-caps text-label-caps text-primary uppercase mb-4 tracking-widest">Category</h3>
+        <div class="space-y-2 font-body-md text-sm">
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input type="radio" name="filter-cat" value="all" checked class="text-black focus:ring-0">
+            <span>All Collections</span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input type="radio" name="filter-cat" value="men" class="text-black focus:ring-0">
+            <span>OUF Man</span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input type="radio" name="filter-cat" value="women" class="text-black focus:ring-0">
+            <span>OUF Woman</span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input type="radio" name="filter-cat" value="couples" class="text-black focus:ring-0">
+            <span>OUF Couples</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Sort By -->
+      <div>
+        <h3 class="font-label-caps text-label-caps text-primary uppercase mb-4 tracking-widest">Sort By</h3>
+        <select id="sort-select" class="w-full bg-transparent border border-outline-variant p-3 font-body-md text-xs text-primary focus:border-black outline-none">
+          <option value="featured">Featured Selection</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+        </select>
+      </div>
+
+      <!-- Quick Reset -->
+      <button id="reset-filters-btn" class="w-full border border-outline-variant py-3 font-label-caps text-[10px] tracking-widest text-secondary hover:text-black hover:border-black transition-colors uppercase">
+        Reset Filters
+      </button>
+
+    </aside>
+
+    <!-- Product Grid Container -->
+    <section class="flex-grow">
+      <div class="hidden md:flex justify-between items-center mb-8 pb-4 border-b border-outline-variant/30">
+        <p class="font-body-md text-secondary" id="desktop-item-count">Showing 7 Bespoke Creations</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer data-ouf-footer></footer>
+
+<script src="js/ouf-shared.js"></script>
+<script src="js/pages/collectionpage.js"></script>
+</body>
+</html>

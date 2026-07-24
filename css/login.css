@@ -1,0 +1,24 @@
+/* =====================================================
+   OUF / عوف — Login Page CSS
+   Version 3.0 | 2026
+   ===================================================== */
+
+.btn-ghost {
+  position: relative;
+}
+
+.btn-ghost::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #9a805b; /* --ouf-gold from design system */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.btn-ghost:hover::after {
+  width: 100%;
+}

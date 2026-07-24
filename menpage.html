@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OUF MAN — Formal Sovereignty & Home Comfort</title>
+<meta name="description" content="OUF MAN — Discover bespoke tailored suits, silk loungewear, and premium menswear. Quiet luxury redefined.">
+<script src="js/ouf-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="css/ouf-shared.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-tertiary-fixed selection:text-tertiary">
+
+<!-- Announcement Bar -->
+<div class="ouf-announcement">
+  <span class="lang-en">COMPLIMENTARY GLOBAL SHIPPING ON ALL BESPOKE ORDERS — 2026 EDITION</span>
+  <span class="lang-ar" style="display:none;">شحن عالمي مجاني لجميع الطلبات المخصصة — إصدار 2026</span>
+</div>
+
+<!-- Header Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30" style="top:40px;">
+  <div class="flex items-center justify-between w-full max-w-container-max mx-auto px-6 md:px-margin-desktop py-4 md:py-5">
+    <button id="mobile-menu-btn" class="md:hidden text-primary" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+
+    <button id="search-btn" class="hidden md:block hover:text-secondary transition-colors duration-300" aria-label="Search">
+      <span class="material-symbols-outlined text-secondary text-[24px]">search</span>
+    </button>
+
+    <a class="font-display-lg text-headline-md md:text-display-lg text-primary tracking-widest absolute left-1/2 -translate-x-1/2" href="homepage.html" style="font-family:'Bodoni Moda',serif;text-decoration:none;">OUF / عوف</a>
+
+    <div class="flex items-center gap-4 md:gap-6">
+      <button id="search-btn-mobile" class="md:hidden hover:text-secondary transition-colors" aria-label="Search">
+        <span class="material-symbols-outlined text-secondary text-[24px]">search</span>
+      </button>
+      <a href="wishlist.html" class="hover:text-secondary transition-colors duration-300 relative" aria-label="The Vault Wishlist">
+        <span class="material-symbols-outlined text-secondary text-[24px]">favorite_border</span>
+        <span data-wishlist-badge style="display:none;">0</span>
+      </a>
+      <a href="login.html" class="hover:text-secondary transition-colors duration-300 md:inline-flex" aria-label="Profile">
+        <span class="material-symbols-outlined text-secondary text-[24px]">person</span>
+      </a>
+      <a href="cartpage.html" class="hover:text-secondary transition-colors duration-300 relative" aria-label="Shopping bag">
+        <span class="material-symbols-outlined text-secondary text-[24px]">shopping_bag</span>
+        <span data-cart-badge style="display:none;">0</span>
+      </a>
+    </div>
+  </div>
+  <nav class="hidden md:flex gap-12 font-label-caps text-label-caps pb-4 w-full justify-center">
+    <a class="text-primary border-b border-on-tertiary-fixed-variant pb-2" href="menpage.html">OUF MAN</a>
+    <a class="text-secondary hover:text-primary transition-colors duration-300 pb-2" href="womanpage.html">OUF WOMAN</a>
+    <a class="text-secondary hover:text-primary transition-colors duration-300 pb-2" href="couplespage.html">OUF COUPLES</a>
+    <a class="text-secondary hover:text-primary transition-colors duration-300 pb-2" href="collectionpage.html">COLLECTIONS</a>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main class="pt-[160px] md:pt-[200px] pb-section-gap">
+
+  <!-- Dual Philosophy Split Hero Banner -->
+  <section class="w-full h-[500px] md:h-[720px] flex flex-col md:flex-row px-margin-mobile md:px-margin-desktop gap-6 max-w-container-max mx-auto mb-16">
+
+    <!-- Left: Formal Tailoring -->
+    <div class="flex-1 relative group cursor-pointer overflow-hidden h-1/2 md:h-full" id="hero-formal">
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXl4IFTd4aaTaXlktbmqNKEzw5AzT1dRKpTX-wL6syQfOkzPvxawFeaxiZHKxqc1Kiz3G0rh3An-XAorEV6ggupa9FvfhETQOEpJPvYwv4_3FQO5HI10VU-tyCdoIK7IWKRyIXqRu-80bB_zOmoTssgHjmy2twCdNL_KGVbF0srkW7q5V2NWfT3wB4TP7BXYJocieenJ1A5ZJUqPJaqtN2AGfGvf-0rhz8Dukkz_MEDxMRLL2WV1FK')"></div>
+      <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10 text-white">
+        <h2 class="font-headline-md text-headline-md mb-2 tracking-widest text-white text-[20px] md:text-[26px]" style="font-family:'Bodoni Moda',serif;">FORMAL SOVEREIGNTY</h2>
+        <p class="font-arabic-display text-[24px] md:text-arabic-display mb-8 text-white opacity-90">البدل الرسمية المخصصة</p>
+        <a href="collectionpage.html?cat=men" class="bg-white text-black font-label-caps text-label-caps px-8 py-4 uppercase tracking-[0.15em] hover:bg-neutral-200 transition-colors duration-300">
+          Enter Tailoring Suite
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Premium Loungewear -->
+    <div class="flex-1 relative group cursor-pointer overflow-hidden h-1/2 md:h-full" id="hero-lounge">
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCz2gU7sA4tMqgWzhFqHPVjEHGSC9wKUzoyIBnig6Zmr_1hupbDRZBFOUtITcIOrQ3YgYuAqL5al2dLO1FWnmhx-nAKCLl8y5A-pPzb9NulJGmDOgNClE9dFaPX_Fnr43IYZFdDgQ4BNUMr-qGf9kECMJneDBQLrWnyn_NfMZ81ZquCfGJuALS7RVRn_AzuQkEhLPEmN0VCiqiiTinx_6DcVvqC_cKo46OKtEoXOSexlOa7HSLBtv4j')"></div>
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10 text-white">
+        <h2 class="font-headline-md text-headline-md mb-2 tracking-widest text-white drop-shadow-sm text-[20px] md:text-[26px]" style="font-family:'Bodoni Moda',serif;">HOME COMFORT</h2>
+        <p class="font-arabic-display text-[24px] md:text-arabic-display mb-8 text-white drop-shadow-sm opacity-90">ملابس المنزل الفاخرة</p>
+        <a href="collectionpage.html?cat=men" class="bg-transparent border border-white text-white font-label-caps text-label-caps px-8 py-4 uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-colors duration-300">
+          Explore Home Loungewear
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Best Sellers Carousel -->
+  <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="flex justify-between items-end mb-12 border-b border-outline-variant/50 pb-4">
+      <div>
+        <h2 class="font-headline-md text-headline-md text-primary" style="font-family:'Bodoni Moda',serif;">Curated Essentials</h2>
+        <p class="font-body-md text-body-md text-secondary mt-2">The foundation of the modern masculine wardrobe.</p>
+      </div>
+      <div class="flex gap-4">
+        <button id="scroll-left" class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center hover:border-primary hover:text-primary transition-colors text-secondary" aria-label="Scroll left">
+          <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+        </button>
+        <button id="scroll-right" class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center hover:border-primary hover:text-primary transition-colors text-secondary" aria-label="Scroll right">
+          <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Horizontal Scroll -->
+    <div class="flex overflow-x-auto gap-6 pb-8 scrollbar-hide snap-x" id="products-carousel">
+
+      <!-- Product Card 1 -->
+      <div class="min-w-[260px] md:min-w-[320px] snap-start product-card group cursor-pointer flex-shrink-0">
+        <div class="relative w-full aspect-[3/4] bg-surface-container-low mb-4 overflow-hidden">
+          <img class="w-full h-full object-cover product-img-main" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD96VklU8neqoZWQxYomcHUpBoZ9jOV_vzv_DGDkvi4ZPXKiypix-gOZ78agpkiKB5VtKKW-3XDjEY8OPbC-UDLHMnPVxahOC5zti20ZGGB1O-RDnVOX6bDuKOKVjA6rN6k-6CNE0rJJNu-bjCcH_Dn1YxpXKvQIuNO-JKmed3cbtPfojNniAsHQoOUFApEtPaierIb8ok6ydrm0aA2ooGwtea88ENOK8YdNRCahcM2aFwGIrQlLuLS" alt="The Sovereign Suit">
+          <img class="w-full h-full object-cover product-img-hover absolute inset-0 opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtckUKyH7_zDhVW0hTwWVN66XGZ-VZRI83BiDcqOnLHLAK4fb1aSJSkRPo7FOoUaPMnjzdV3cvzqT8JwXhNRbrie0-_WhP7CTQ9PZtWyz0SsCk3kMGKh9RCEAi5SuwWkXO3Evjsfq3xhZ0fRWVuHim3bewSaZhGFN9WIO0T2rNGi4ERi-QtXnPFjLcitfU0JLYz26XRT5BTgH8ajm5hIgyDZwMhVOyWzd5lr8F1UpfabvomEM22o4z" alt="The Sovereign Suit detail">
+          
+          <div class="product-action-bar">
+            <button class="flex-1 bg-black text-white py-3 font-label-caps text-[10px] tracking-widest uppercase quick-add-btn" data-id="man-suit-001" data-name="The Sovereign Suit" data-price="22400" data-size="40R">QUICK ADD</button>
+            <button class="wishlist-btn" data-wishlist-toggle="man-suit-001" title="Save to Wishlist"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+            <button class="wishlist-btn" data-quickview="man-suit-001" title="Quick View"><span class="material-symbols-outlined text-[18px]">visibility</span></button>
+          </div>
+        </div>
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-body-lg text-body-lg text-primary mb-1" style="font-family:'Bodoni Moda',serif;">The Sovereign Suit</h3>
+            <p class="font-body-md text-body-md text-secondary">Midnight Navy</p>
+          </div>
+          <span class="font-body-md text-body-md text-primary tracking-wide">22,400 EGP</span>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="min-w-[260px] md:min-w-[320px] snap-start product-card group cursor-pointer flex-shrink-0">
+        <div class="relative w-full aspect-[3/4] bg-surface-container-low mb-4 overflow-hidden">
+          <img class="w-full h-full object-cover product-img-main" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUEIdojBJ5-YM_zNsLs31BUhwaR-njU8gbOiP1c81ZZ-J2Fo7dnqMyU8Ut0lRUIpMC0UKbsxLIq3SkK5WXLcd82sDZlZItkzwiPHBZivvzlnW1pUrZ9yh-5YnlBdwKWccyOmZZXCXobvPXduyQYsD7Wyjm90ndwg8RpIu8R56eM80X5G_Eq_u9nMxLBd-Ct3dFXe0zThnGunuLB9F8djjrgdUTI1bLd116N0984ryPy0-CG_ohrunL" alt="Silk Lounge Set">
+          <img class="w-full h-full object-cover product-img-hover absolute inset-0 opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz2gU7sA4tMqgWzhFqHPVjEHGSC9wKUzoyIBnig6Zmr_1hupbDRZBFOUtITcIOrQ3YgYuAqL5al2dLO1FWnmhx-nAKCLl8y5A-pPzb9NulJGmDOgNClE9dFaPX_Fnr43IYZFdDgQ4BNUMr-qGf9kECMJneDBQLrWnyn_NfMZ81ZquCfGJuALS7RVRn_AzuQkEhLPEmN0VCiqiiTinx_6DcVvqC_cKo46OKtEoXOSexlOa7HSLBtv4j" alt="Silk Lounge Set detail">
+          
+          <div class="product-action-bar">
+            <button class="flex-1 bg-black text-white py-3 font-label-caps text-[10px] tracking-widest uppercase quick-add-btn" data-id="man-lounge-002" data-name="Silk Lounge Set" data-price="7900" data-size="M">QUICK ADD</button>
+            <button class="wishlist-btn" data-wishlist-toggle="man-lounge-002" title="Save to Wishlist"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+            <button class="wishlist-btn" data-quickview="man-lounge-002" title="Quick View"><span class="material-symbols-outlined text-[18px]">visibility</span></button>
+          </div>
+        </div>
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-body-lg text-body-lg text-primary mb-1" style="font-family:'Bodoni Moda',serif;">Silk Lounge Set</h3>
+            <p class="font-body-md text-body-md text-secondary">Emerald Mulberry Silk</p>
+          </div>
+          <span class="font-body-md text-body-md text-primary tracking-wide">7,900 EGP</span>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="min-w-[260px] md:min-w-[320px] snap-start product-card group cursor-pointer flex-shrink-0">
+        <div class="relative w-full aspect-[3/4] bg-surface-container-low mb-4 overflow-hidden">
+          <img class="w-full h-full object-cover product-img-main" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0FW89lP95ZTvqNFtgks7eo88cC_I3HrOPGz5gsi4uPBe_G_3DMi7F8sCpR5LBHvNxt6eKKAAaz2oklnoX40M8kz9T7aRR4bGTgtl_ZXTkSLezuNI9GWjVKvC_MbBUrlCOU71z7MBNLZUu9XWeToT_M13Ld_s-VjiGfoQsYnnFw02OxMPrwjkNLwK4bK1hN2Dd4utB6khaatrNeysAVkJwVXrsz22aMV_OI5FraoBdgVILIwjYZ81m" alt="Signature Poplin Shirt">
+          <img class="w-full h-full object-cover product-img-hover absolute inset-0 opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0FW89lP95ZTvqNFtgks7eo88cC_I3HrOPGz5gsi4uPBe_G_3DMi7F8sCpR5LBHvNxt6eKKAAaz2oklnoX40M8kz9T7aRR4bGTgtl_ZXTkSLezuNI9GWjVKvC_MbBUrlCOU71z7MBNLZUu9XWeToT_M13Ld_s-VjiGfoQsYnnFw02OxMPrwjkNLwK4bK1hN2Dd4utB6khaatrNeysAVkJwVXrsz22aMV_OI5FraoBdgVILIwjYZ81m" alt="Signature Poplin Shirt detail">
+          
+          <div class="product-action-bar">
+            <button class="flex-1 bg-black text-white py-3 font-label-caps text-[10px] tracking-widest uppercase quick-add-btn" data-id="man-shirt-003" data-name="Signature Poplin Shirt" data-price="2980" data-size="40">QUICK ADD</button>
+            <button class="wishlist-btn" data-wishlist-toggle="man-shirt-003" title="Save to Wishlist"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+            <button class="wishlist-btn" data-quickview="man-shirt-003" title="Quick View"><span class="material-symbols-outlined text-[18px]">visibility</span></button>
+          </div>
+        </div>
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-body-lg text-body-lg text-primary mb-1" style="font-family:'Bodoni Moda',serif;">Signature Poplin Shirt</h3>
+            <p class="font-body-md text-body-md text-secondary">Egyptian Cotton</p>
+          </div>
+          <span class="font-body-md text-body-md text-primary tracking-wide">2,980 EGP</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer data-ouf-footer></footer>
+
+<script src="js/ouf-shared.js"></script>
+<script src="js/pages/menpage.js"></script>
+</body>
+</html>
