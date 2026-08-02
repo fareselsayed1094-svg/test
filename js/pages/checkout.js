@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const total = OUF.getTotal();
 
     const subtotalEl = document.getElementById('co-subtotal');
-    if (subtotalEl) subtotalEl.textContent = OUF.formatPrice(subtotal);
+    if (subtotalEl) subtotalEl.innerHTML = OUF.formatPrice(subtotal);
 
     const discLine = document.getElementById('co-discount-line');
     const couponLabel = document.getElementById('co-coupon-label');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (discount > 0 && OUF.coupon) {
       if (discLine) discLine.classList.remove('hidden');
       if (couponLabel) couponLabel.textContent = OUF.coupon.code;
-      if (discountVal) discountVal.textContent = '-' + OUF.formatPrice(discount);
+      if (discountVal) discountVal.innerHTML = '-' + OUF.formatPrice(discount);
     } else {
       if (discLine) discLine.classList.add('hidden');
     }
@@ -55,14 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (giftFeeLine && giftFeeVal) {
       if (OUF.gift.enabled) {
         giftFeeLine.classList.remove('hidden');
-        giftFeeVal.textContent = OUF.formatPrice(OUF.getGiftFee());
+        giftFeeVal.innerHTML = OUF.formatPrice(OUF.getGiftFee());
       } else {
         giftFeeLine.classList.add('hidden');
       }
     }
 
     const totalEl = document.getElementById('co-total');
-    if (totalEl) totalEl.textContent = OUF.formatPrice(total).replace(' EGP', '');
+    if (totalEl) totalEl.innerHTML = OUF.formatPrice(total);
 
     // Synchronize Checkout Coupon input status
     const cInput = document.getElementById('checkout-coupon-input');

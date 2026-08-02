@@ -116,13 +116,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const discount = OUF.getDiscount();
     const total = OUF.getTotal();
 
-    document.getElementById('summary-subtotal').textContent = OUF.formatPrice(subtotal);
+    const subtotalEl = document.getElementById('summary-subtotal');
+    if (subtotalEl) subtotalEl.innerHTML = OUF.formatPrice(subtotal);
 
     const discLine = document.getElementById('summary-discount-line');
     if (discount > 0 && OUF.coupon) {
       discLine.classList.remove('hidden');
       document.getElementById('summary-coupon-label').textContent = OUF.coupon.code;
-      document.getElementById('summary-discount-val').textContent = '-' + OUF.formatPrice(discount);
+      const discValEl = document.getElementById('summary-discount-val');
+      if (discValEl) discValEl.innerHTML = '-' + OUF.formatPrice(discount);
     } else {
       discLine?.classList.add('hidden');
     }
@@ -131,7 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (OUF.gift.enabled && OUF.cart.length > 0) giftLine?.classList.remove('hidden');
     else giftLine?.classList.add('hidden');
 
-    document.getElementById('summary-total').textContent = OUF.formatPrice(total);
+    const totalEl = document.getElementById('summary-total');
+    if (totalEl) totalEl.innerHTML = OUF.formatPrice(total);
 
     const cInput = document.getElementById('coupon-input');
     const cBtn = document.getElementById('coupon-apply-btn');

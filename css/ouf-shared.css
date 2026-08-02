@@ -1,10 +1,80 @@
+/* ==========================================
+   MOBILE LAYOUT & ANIMATION FIXES
+   ========================================== */
+
+/* 1. Prevent Horizontal Overflow & Fix Viewport Containment */
+html, body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+img, video, iframe, svg, canvas {
+  max-width: 100% !important;
+  height: auto;
+}
+
+.container, [class*="container"] {
+  max-width: 100% !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 2. Mobile Notch Safe Areas & Instant Touch Response */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+a, button, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* 3. GPU Hardware Acceleration for Smooth Mobile Animations */
+.animate-fade-in,
+.animate-slide-up,
+[class*="transition-"],
+[class*="duration-"],
+header, nav, [class*="fixed"], [class*="sticky"] {
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* 4. Scroll Animation Fallback for Mobile Viewports */
+@media (max-width: 768px) {
+  [data-aos], .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: opacity 0.3s ease-in-out !important;
+  }
+}
+
 /* =====================================================
    OUF / عوف — Luxury Shared CSS
    Version 4.0 | July 2026
    Complete Design System
    ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,300..900;1,6..96,400..900&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,300..900;1,6..96,400..900&family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 /* ── CSS Variables ── */
@@ -19,7 +89,7 @@
   --ouf-border-light: rgba(196, 199, 199, 0.3);
   --ouf-font-serif: 'Bodoni Moda', serif;
   --ouf-font-sans: 'Inter', sans-serif;
-  --ouf-font-arabic: 'Amiri', serif;
+  --ouf-font-arabic: 'Cairo', 'Amiri', serif;
   --ouf-radius: 0px;
   --ouf-transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   --ouf-shadow: 0 8px 32px rgba(0,0,0,0.08);
@@ -896,4 +966,164 @@ input:focus, textarea:focus, select:focus {
   position: sticky;
   top: calc(var(--announcement-h) + var(--nav-h) + 24px);
 }
+
+/* =====================================================
+   LUXURY PRICE STYLING SYSTEM (شكل الأسعار المتطور)
+   ===================================================== */
+.ouf-price-tag, .product-price, [data-price] {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--ouf-font-serif);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ouf-primary);
+}
+
+.ouf-price-current {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111111;
+  font-family: 'Bodoni Moda', 'Cairo', serif;
+}
+
+.ouf-price-old {
+  font-size: 0.88rem;
+  color: #8c8e8d;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.ouf-price-currency {
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ouf-gold);
+  margin-left: 3px;
+}
+
+.ouf-price-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: rgba(154, 128, 91, 0.12);
+  color: #836741;
+  border: 1px solid rgba(154, 128, 91, 0.25);
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: var(--ouf-font-sans);
+}
+
+/* Product Card Specific Price Styling */
+.ouf-card-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 6px;
+}
+
+.ouf-card-price {
+  font-family: 'Bodoni Moda', 'Cairo', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.02em;
+}
+
+/* Hero & Detail Price Styling */
+.ouf-price-hero {
+  font-size: 1.85rem;
+  font-family: 'Bodoni Moda', 'Cairo', serif;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* =====================================================
+   ICON REFINEMENT & BADGES (ضبط الأيقونات)
+   ===================================================== */
+.material-symbols-outlined {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.25s ease;
+  vertical-align: middle;
+}
+
+button:hover .material-symbols-outlined,
+a:hover .material-symbols-outlined {
+  transform: translateY(-1px) scale(1.05);
+}
+
+/* Nav Badge Counters */
+[data-cart-badge], [data-wishlist-badge] {
+  position: absolute;
+  top: -5px;
+  right: -7px;
+  background: var(--ouf-gold);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(154, 128, 91, 0.4);
+  border: 1.5px solid #ffffff;
+}
+
+/* =====================================================
+   TYPOGRAPHY & ARABIC TEXT REDESIGN (ضبط الخطوط والنصوص)
+   ===================================================== */
+.lang-ar, [dir="rtl"], body[data-lang="ar"] {
+  font-family: 'Cairo', 'Amiri', serif !important;
+}
+
+h1, h2, h3, h4, .font-display-lg, .font-headline-md {
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+
+p, .font-body-md, .font-body-lg {
+  line-height: 1.65;
+  color: #383a39;
+}
+
+/* Enhanced Arabic Typography Line Heights & Letter Spacing */
+.lang-ar {
+  line-height: 1.7 !important;
+  letter-spacing: 0 !important;
+}
+
+.lang-ar h1, .lang-ar h2, .lang-ar h3, .lang-ar h4 {
+  font-family: 'Cairo', serif !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+/* Product Titles & Descriptions */
+.ouf-product-title {
+  font-family: 'Bodoni Moda', 'Cairo', serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #111111;
+  line-height: 1.35;
+}
+
+.ouf-product-desc {
+  font-family: var(--ouf-font-sans);
+  font-size: 0.875rem;
+  color: #666867;
+  line-height: 1.6;
+}
+
 

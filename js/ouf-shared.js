@@ -316,6 +316,20 @@ const OUF = {
     localStorage.setItem('ouf_orders', JSON.stringify(history.slice(0, 20)));
     this.clearOrder();
     return order;
+  },
+
+  formatPrice(amount, oldPrice = null) {
+    const num = Number(amount) || 0;
+    const formatted = num.toLocaleString('en-US');
+    const currency = this.lang === 'ar' ? 'ج.م' : 'EGP';
+    
+    if (oldPrice && Number(oldPrice) > num) {
+      const oldFormatted = Number(oldPrice).toLocaleString('en-US');
+      const discountPct = Math.round(((oldPrice - num) / oldPrice) * 100);
+      const saveText = this.lang === 'ar' ? `وفر ${discountPct}%` : `Save ${discountPct}%`;
+      return `<span class="ouf-price-tag"><span class="ouf-price-current">${formatted} <span class="ouf-price-currency">${currency}</span></span><span class="ouf-price-old">${oldFormatted}</span><span class="ouf-price-badge">${saveText}</span></span>`;
+    }
+    return `<span class="ouf-price-tag"><span class="ouf-price-current">${formatted} <span class="ouf-price-currency">${currency}</span></span></span>`;
   }
 };
 
@@ -1042,5 +1056,22 @@ document.addEventListener('DOMContentLoaded', function() {
   } catch (err) {
     console.warn('Year token replacement failed', err);
   }
+});
+
+/* ==========================================
+   DYNAMIC MOBILE VIEWPORT CALCULATOR
+   ==========================================
+*/
+document.addEventListener('DOMContentLoaded', () => {
+  const fixMobileLayout = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
+
+  fixMobileLayout();
+  window.addEventListener('resize', fixMobileLayout);
+  window.addEventListener('orientationchange', () => {
+    setTimeout(fixMobileLayout, 200);
+  });
 });
 
